@@ -182,7 +182,12 @@ gerenciador de lembretes e organização de contas.
 +-----------------------------------------------------------------------+
 | # Cronograma                                                          |
 +-----------------------------------------------------------------------+
-
+**Sprint's**
+- Iniciação.\
+- Desenvolvimento Fase 01.\
+- Desenvolvimento Fase 02(teste com clientes).\
+- Desenvolvimento Fase 03(Atualizações e Ajustes).\
+- Apresentações.\
 +-----------------------------------------------------------------------+
 | # Materiais e Métodos                                                 |
 +-----------------------------------------------------------------------+
