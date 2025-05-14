@@ -210,9 +210,13 @@ b.  **Códigos das principais funcionalidades**:
 | # Conclusão                                                           |
 +-----------------------------------------------------------------------+
 
-a.  **Impacto do sistema:**
+a.  **Impacto do Sistema**:
+Observamos que o sistema, desde a fase de teste, tem proporcionado a cliente um tempo a mais para realização de outras tarefas, tempo este que antes era dediacado 30 a 40 minutos para organização de contas, agora em 10 minutos consegue deixar tudo organizado.
 
 b.  **Melhorias Futuras**:
+- Melhoria do tempo de performace do código;\
+- Gerenciamento de Agenda;\
+- Programa ler outros tipos de arquivos.\
 
 +-----------------------------------------------------------------------+
 | # Homologação do MVP junto ao cliente                                 |
@@ -246,7 +250,7 @@ entre o time de desenvolvedores e o cliente.
 | # Divulgação                                                          |
 +-----------------------------------------------------------------------+
 
-a.  **Linkedin do Projeto**
+a. https://www.linkedin.com/in/wallace-francisco-54a5b41bb/details/projects/
 
   --------------------------------- -------------------------------------
                                     
