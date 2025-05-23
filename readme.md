@@ -187,24 +187,85 @@ gerenciador de lembretes e organização de contas.
 - Desenvolvimento Fase 01.\
 - Desenvolvimento Fase 02(teste com clientes).\
 - Desenvolvimento Fase 03(Atualizações e Ajustes).\
+- Homologação.\
 - Apresentações.\
 +-----------------------------------------------------------------------+
 | # Materiais e Métodos                                                 |
 +-----------------------------------------------------------------------+
 
-a.  **Modelagem do sistema**:
+a. **Modelagem do sistema**
 
-b.  **Tecnologias utilizadas**:
+O sistema foi modelado com foco na **extração automática de informações relevantes** (data de vencimento e valor) a partir de **imagens de contas** enviadas pelo usuário. O fluxo principal envolve:
 
-c.  **Arquitetura do sistema**:
+1. Upload ou captura de imagem pelo usuário.
+2. Extração de texto da imagem utilizando OCR.
+3. Identificação dos dados e armazenamento como lembrete no banco de dados.
+
+Esse modelo facilita o controle financeiro e automatiza o registro de contas a pagar, auxiliando o usuário na organização de seus compromissos.
+
+---
+
+b. **Tecnologias utilizadas**
+
+- **HTML5 & CSS3** – Estrutura e estilo da interface.
+- **JavaScript** – Lógica de extração e manipulação dos dados.
+- **Tesseract.js** – Biblioteca OCR para extração de texto das imagens.
+- **Firebase**:
+  - *Firestore* – Armazenamento de lembretes.
+  - *Analytics* – Monitoramento de uso.
+- **VSCode** – Ambiente de desenvolvimento.
+- **Diagrams.net** – Ferramenta para criação de fluxogramas e modelagens visuais.
+
+---
+
+ c. **Arquitetura do sistema**
+
+A arquitetura do sistema é baseada em uma aplicação cliente (frontend) com OCR no navegador e backend via Firebase:
+- **Frontend**: Interface responsiva em HTML/CSS/JavaScript.
+- **OCR no navegador**: Realizado com Tesseract.js, sem necessidade de servidor intermediário.
+- **Banco de dados**: Firestore armazena os lembretes com as seguintes informações:
+  - Data de vencimento
+  - Valor da conta
+  - Data de criação do lembrete
 
 +-----------------------------------------------------------------------+
 | # Resultados                                                          |
 +-----------------------------------------------------------------------+
 
-a.  **Protótipo**:
+a. **Protótipo**
 
-b.  **Códigos das principais funcionalidades**:
+O sistema foi prototipado como uma aplicação web simples e responsiva. Seu objetivo principal é permitir que o usuário envie uma imagem de uma conta (como boletos ou faturas), que será processada automaticamente para extrair os principais dados: **data de vencimento** e **valor**.
+
+A interface foi construída com HTML e CSS, enquanto a lógica de leitura e extração é feita com JavaScript. Abaixo está um exemplo da interface e da lógica integrada:
+
+```html
+<!-- HTML da interface -->
+<label for="uploadFoto" class="botao-camera">📸 Escolher Foto da Conta</label>
+<input type="file" accept="image/*" id="uploadFoto" />
+<div class="box" id="resultado">Nenhuma imagem enviada ainda.</div>
+<div class="box" id="dadosExtraidos"></div>
+
+<!-- JavaScript de upload e processamento OCR -->
+<script>
+  document.getElementById('uploadFoto').addEventListener('change', async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const { data: { text } } = await Tesseract.recognize(file, 'por');
+      document.getElementById('resultado').innerText = text;
+      document.getElementById('dadosExtraidos').innerText = extrairDadosDoTexto(text);
+    }
+  });
+
+  function extrairDadosDoTexto(texto) {
+    const regexData = /(\d{2}\/\d{2}\/\d{4})/;
+    const regexValor = /R?\$ ?\d{1,3}(\.\d{3})*,?\d{2}/;
+
+    const data = texto.match(regexData)?.[0] || "Data não encontrada";
+    const valor = texto.match(regexValor)?.[0] || "Valor não encontrado";
+
+    return `Data de Vencimento: ${data}\nValor: ${valor}`;
+  }
+</script>
 
 +-----------------------------------------------------------------------+
 | # Conclusão                                                           |
@@ -259,8 +320,6 @@ a. https://www.linkedin.com/in/wallace-francisco-54a5b41bb/details/projects/
 
 b.  **Seminário de Projetos de Software**
 
-> **[Vídeo da apresentação:]{.mark}**
-
   ---------------------------------- ------------------------------------
                                      
 
@@ -275,7 +334,35 @@ b.  **Seminário de Projetos de Software**
 > [Segue]{.mark} abaixo a lista de presentes na apresentação.
 
   -----------------------------------------------------------------------
-                  **Lista de presentes na Apresentação**
+                  
+**Lista de Presença - Quarta-Feira - 14/05/2025**
+
+| Nome                                      | Matrícula       |
+|-------------------------------------------|-----------------|
+| Gustavo Andrade Magalhães                 | 202402799584    |
+| Nicolas Anderson Cala                     | 202402846401    |
+| Sabrina Moreno Paes                       | 202403733943    |
+| Zahira de Oliveira Silva                  | 202402893981    |
+| Ademir Filho Pinho da Silva               | 202308428641    |
+| Eduardo Alexandre da Rocha Filho          | 202309148692    |
+| Leonardo Henrique de Andrade Goulart      | 202309398303    |
+| Lucas de Souza Lanaro                     | 202308428497    |
+| Ana Beatriz Cossari                       | 202302480624    |
+| Gabriel Nakamura Ramos                    | 202302381286    |
+| Kelton Bruno Santos de Oliveira           | 202302380883    |
+| Luiz Alberto da Silva Junior              | 202302423108    |
+| Gabriel Rodrigues Honorato                | 20240266029     |
+| Isadora Geremias de Melo                  | 202403503786    |
+| Davi Miguel da Rocha Lima                 | 202402530951    |
+| Natan Henrique Ribeiro Lobo               | 202402531221    |
+| Nicolas Mansano Duarte                    | 202403955423    |
+| Victor Felipe Pires                       | 202403000857    |
+| Augusto Ramlow                            | 202308395815    |
+| Wallace da Silva Francisco                | 202308428713    |
+| Willian Luiz Iamarino Gandolphi           | 202308428454    |
+| Erick Valente Sprogis                     | 202403871751    |
+| Jhonatan Victor Conde Ramos               | 202403718774    |
+
 
   -----------------------------------------------------------------------
 
