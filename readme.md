@@ -287,21 +287,18 @@ Após as entregas parciais, realizadas de acordo com os requisitos do
 sistema e cronograma, o MVP foi apresentado em uma reunião, realizada
 entre o time de desenvolvedores e o cliente.
 
-  ---------------------------------- ------------------------------------
-                                     
-
-      Da esquerda para direita:      
-
-                                     
-
-     Participantes da homologação        Participantes da homologação
-      assistindo a apresentação      
-  ---------------------------------- ------------------------------------
+  -----------------------------------------------------------------------
 
 > Segue abaixo a lista de presentes na homologação do MVP.
 
   -----------------------------------------------------------------------
-                   **Lista de presentes na Homologação**
+
+| Nome                                      | 
+|-------------------------------------------|
+| Elaine Cristina Ferreira Iamarino         |
+| Augusto Ramlow                            |
+| Wallace da Silva Francisco                |
+| Willian Luiz Iamarino Gandolphi           |
 
   -----------------------------------------------------------------------
 
@@ -321,21 +318,10 @@ a. https://www.linkedin.com/in/wallace-francisco-54a5b41bb/details/projects/
 b.  **Seminário de Projetos de Software**
 
   ---------------------------------- ------------------------------------
-                                     
-
-      Da esquerda para direita:      
-
-                                     
-
-  Participantes do evento assistindo Participantes do evento assistindo a
-            a apresentação                       apresentação
-  ---------------------------------- ------------------------------------
 
 > [Segue]{.mark} abaixo a lista de presentes na apresentação.
 
   -----------------------------------------------------------------------
-                  
-**Lista de Presença - Quarta-Feira - 14/05/2025**
 
 | Nome                                      | Matrícula       |
 |-------------------------------------------|-----------------|
